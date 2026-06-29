@@ -417,15 +417,18 @@ section{position:relative;}
 }
 .lang-switch button{
   background:transparent;border:1px solid transparent;cursor:pointer;
-  font-size:24px;line-height:1;
-  padding:.25rem .35rem;border-radius:6px;
+  line-height:1;padding:.25rem;border-radius:6px;
   display:inline-flex;align-items:center;justify-content:center;
   transition:var(--trans);
-  filter:grayscale(.35) opacity(.85);
+  filter:grayscale(.4) opacity(.8);
+}
+.lang-switch button svg{
+  width:32px;height:22px;display:block;border-radius:3px;
+  box-shadow:0 1px 3px rgba(0,0,0,.3);
 }
 .lang-switch button:hover{
   filter:none;
-  box-shadow:0 0 12px rgba(201,168,76,.6);
+  box-shadow:0 0 12px rgba(201,168,76,.65);
 }
 .lang-switch button.active{
   background:rgba(201,168,76,.25);
@@ -508,8 +511,22 @@ body{padding-bottom:88px;}
   </nav>
 
   <div class="lang-switch" id="langSwitch" aria-label="Choix de la langue">
-    <button type="button" data-lang="fr" class="active" aria-label="Français" title="Français">🇫🇷</button>
-    <button type="button" data-lang="en" aria-label="English" title="English">🇬🇧</button>
+    <button type="button" data-lang="fr" class="active" aria-label="Français" title="Français">
+      <svg viewBox="0 0 3 2"><rect width="1" height="2" fill="#0055A4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg>
+    </button>
+    <button type="button" data-lang="en" aria-label="English" title="English">
+      <svg viewBox="0 0 60 30">
+        <clipPath id="uk-c"><rect width="60" height="30"/></clipPath>
+        <clipPath id="uk-s"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath>
+        <g clip-path="url(#uk-c)">
+          <rect width="60" height="30" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-s)" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+        </g>
+      </svg>
+    </button>
   </div>
 
   <button class="nav-toggle" id="navToggle" aria-label="Menu">
