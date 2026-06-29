@@ -360,6 +360,9 @@ section{position:relative;}
 .footer{background:#071a33;color:rgba(255,255,255,.7);padding:4rem 0 0;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:3rem;}
 .footer-logo img{height:60px;margin-bottom:1.2rem;border-radius:4px;}
+.footer-brand{display:flex;flex-direction:column;line-height:1.15;margin-bottom:1.3rem;}
+.footer-brand b{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:#fff;}
+.footer-brand span{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--or);}
 .footer p{font-size:.9rem;font-weight:300;line-height:1.8;}
 .footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.3rem;font-weight:600;}
 .footer ul li{margin-bottom:.7rem;}
@@ -872,7 +875,10 @@ body{padding-bottom:88px;}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="logo.png" alt="La Corniche Hôtel Kamsar" style="height: 60px; width: auto;" onerror="this.style.display='none'">
+        <div class="footer-brand">
+          <b>La Corniche</b>
+          <span>Hôtel · Kamsar</span>
+        </div>
         <p>Un havre de paix au bord de l'Atlantique. 33 chambres avec balcon privé vue mer, à Kamsar, en Guinée.</p>
         <div class="footer-social">
           <a href="https://facebook.com/cornichehotelkamsar" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
