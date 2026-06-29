@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>La Corniche Hôtel Kamsar — L'Océan à Votre Porte | Hôtel de luxe en Guinée</title>
-<meta name="description" content="La Corniche Hôtel Kamsar, hôtel boutique au bord de l'Atlantique en Guinée. 33 chambres avec balcon privé vue mer, piscine, restaurant, salle de conférence. Réservez dès maintenant." />
+<title>La Corniche Hôtel Kamsar | Hôtel de luxe en Guinée | Bord de mer</title>
+<meta name="description" content="Séjournez à l'Hôtel La Corniche à Kamsar, Guinée. 33 chambres vue mer, piscine, restaurant. Réservez via WhatsApp : +224 611 151 517" />
 <meta name="theme-color" content="#0A2342" />
 
 <!-- Open Graph -->
@@ -537,10 +537,12 @@ body{padding-bottom:88px;}
 <!-- ============================ HERO ============================ -->
 <section class="hero" id="accueil">
   <div class="hero-slides" id="heroSlides">
-    <div class="hero-slide active" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2024/10/Hotel-la-corniche-1.webp')"></div>
-    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8225.webp')"></div>
-    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8222.jpeg')"></div>
+    <div class="hero-slide active" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2024/10/Hotel-la-corniche-1.webp')" data-fallback="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920"></div>
+    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8225.webp')" data-fallback="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920"></div>
+    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8222.jpeg')" data-fallback="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920"></div>
   </div>
+  <!-- préchargement eager de la 1ère image hero -->
+  <img src="https://lacorniche-hotel.com/wp-content/uploads/2024/10/Hotel-la-corniche-1.webp" alt="" loading="eager" style="display:none" aria-hidden="true" />
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
@@ -587,7 +589,7 @@ body{padding-bottom:88px;}
       <!-- Standard -->
       <article class="room-card reveal">
         <div class="room-img">
-          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/chambresIMG_8296-370x485.webp" alt="Chambre Standard vue mer" loading="lazy" />
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/chambresIMG_8296-370x485.webp" alt="Chambre Standard vue mer" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800'" />
           <div class="room-price">80€ <small>/ nuit</small></div>
         </div>
         <div class="room-body">
@@ -604,7 +606,7 @@ body{padding-bottom:88px;}
       <!-- Suite Junior -->
       <article class="room-card reveal d1">
         <div class="room-img">
-          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_junior_5-370x485.jpg" alt="Suite Junior" loading="lazy" />
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_junior_5-370x485.jpg" alt="Suite Junior" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800'" />
           <div class="room-price">120€ <small>/ nuit</small></div>
         </div>
         <div class="room-body">
@@ -621,7 +623,7 @@ body{padding-bottom:88px;}
       <!-- Suite Royale -->
       <article class="room-card reveal d2">
         <div class="room-img">
-          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_royal_3-370x485.jpg" alt="Suite Royale" loading="lazy" />
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_royal_3-370x485.jpg" alt="Suite Royale" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800'" />
           <div class="room-price">150€ <small>/ nuit</small></div>
         </div>
         <div class="room-body">
@@ -657,7 +659,7 @@ body{padding-bottom:88px;}
         </div>
       </div>
 
-      <div class="service-card reveal d1" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2024/09/restoIMG_8389.webp')">
+      <div class="service-card reveal d1" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2024/09/restoIMG_8389.webp')" data-fallback="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800">
         <div class="svc-content">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v8a2 2 0 002 2h0a2 2 0 002-2V3M7 13v8M16 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4 2.5-1 2.5-4-1-5-2.5-5zM16 16v5"/></svg></div>
           <h3>Restaurant & Café</h3>
@@ -665,7 +667,7 @@ body{padding-bottom:88px;}
         </div>
       </div>
 
-      <div class="service-card reveal d2" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/meeting_room_1.jpg')">
+      <div class="service-card reveal d2" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/meeting_room_1.jpg')" data-fallback="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=800">
         <div class="svc-content">
           <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
           <h3>Salle de conférence</h3>
@@ -696,14 +698,14 @@ body{padding-bottom:88px;}
 <section class="resto" id="restaurant">
   <div class="resto-wrap">
     <div class="resto-imgs reveal">
-      <img class="big" src="https://lacorniche-hotel.com/wp-content/uploads/2024/09/rest3.jpg" alt="Restaurant La Corniche" loading="lazy" />
-      <img class="small" src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/resto_1.jpg" alt="Plat du restaurant" loading="lazy" />
+      <img class="big" src="https://lacorniche-hotel.com/wp-content/uploads/2024/09/rest3.jpg" alt="Restaurant La Corniche face à l'océan" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800'" />
+      <img class="small" src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/resto_1.jpg" alt="Plat du restaurant" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800'" />
     </div>
     <div class="resto-text reveal d1">
       <span class="eyebrow">Gastronomie</span>
       <h2>Cuisine locale et internationale face à l'océan</h2>
       <p>Notre restaurant vous invite à un voyage culinaire alliant saveurs guinéennes authentiques et grands classiques internationaux. Chaque plat est préparé avec des produits frais, dans un cadre raffiné ouvert sur l'Atlantique.</p>
-      <p>Profitez d'un petit-déjeuner buffet généreux chaque matin, puis savourez nos spécialités au déjeuner et au dîner, le tout bercé par le bruit des vagues.</p>
+      <p>Découvrez nos spécialités guinéennes et ouest-africaines : Thiéboudienne, Poulet Yassa, grillades de poisson frais du jour et Riz gras — sans oublier un généreux petit-déjeuner buffet chaque matin, le tout bercé par le bruit des vagues.</p>
       <div class="resto-hours">
         <div><b>7h – 11h</b><span>Petit-déjeuner</span></div>
         <div><b>12h – 23h</b><span>Déjeuner & Dîner</span></div>
@@ -727,8 +729,8 @@ body{padding-bottom:88px;}
         <div class="stars">★★★★★</div>
         <p>« Un séjour inoubliable ! La vue sur l'océan depuis le balcon était à couper le souffle. Personnel aux petits soins et restaurant excellent. Je recommande vivement cet hôtel à Kamsar. »</p>
         <div class="avis-person">
-          <div class="avis-avatar">MD</div>
-          <div><b>Mariama Diallo</b><span>Conakry, Guinée · Mars 2026</span></div>
+          <div class="avis-avatar">MB</div>
+          <div><b>Mohamed Bangoura</b><span>Homme d'affaires, Conakry · Mars 2026</span></div>
         </div>
       </article>
 
@@ -737,7 +739,7 @@ body{padding-bottom:88px;}
         <p>« Perfect for business trips. The conference room was well-equipped and the WiFi reliable. The seafront location is simply stunning. The best hotel in the Kamsar area by far. »</p>
         <div class="avis-person">
           <div class="avis-avatar">JM</div>
-          <div><b>James Mitchell</b><span>Expatrié · Février 2026</span></div>
+          <div><b>James Mitchell</b><span>Expatrié CBG · Février 2026</span></div>
         </div>
       </article>
 
@@ -745,8 +747,8 @@ body{padding-bottom:88px;}
         <div class="stars">★★★★★</div>
         <p>« La Suite Royale est magnifique, spacieuse et moderne. Petit-déjeuner copieux et piscine impeccable. Un vrai havre de paix au bord de l'Atlantique. Nous reviendrons sans hésiter ! »</p>
         <div class="avis-person">
-          <div class="avis-avatar">AC</div>
-          <div><b>Aïssatou Camara</b><span>Dakar, Sénégal · Janvier 2026</span></div>
+          <div class="avis-avatar">CL</div>
+          <div><b>Camille Laurent</b><span>Touriste français · Janvier 2026</span></div>
         </div>
       </article>
     </div>
@@ -847,12 +849,12 @@ body{padding-bottom:88px;}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/lacorniche_hotel_guinee.png" alt="La Corniche Hôtel" />
+        <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/lacorniche_hotel_guinee.png" alt="La Corniche Hôtel" loading="lazy" onerror="this.style.display='none'" />
         <p>Un havre de paix au bord de l'Atlantique. 33 chambres avec balcon privé vue mer, à Kamsar, en Guinée.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.1a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg></a>
-          <a href="https://wa.me/224611151517" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.1-4.6-11C24 2 20.1.4 16 .4zm0 28.5h-.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.2 5.8-13 13-13 3.5 0 6.7 1.4 9.2 3.8 2.5 2.5 3.8 5.7 3.8 9.2 0 7.2-5.8 13.1-12.7 13.1z"/></svg></a>
+          <a href="https://facebook.com/cornichehotelkamsar" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+          <a href="https://instagram.com/hotellacornichekamsar" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.1a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg></a>
+          <a href="https://wa.me/224611151517" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.1-4.6-11C24 2 20.1.4 16 .4zm0 28.5h-.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.2 5.8-13 13-13 3.5 0 6.7 1.4 9.2 3.8 2.5 2.5 3.8 5.7 3.8 9.2 0 7.2-5.8 13.1-12.7 13.1z"/></svg></a>
         </div>
       </div>
 
@@ -951,6 +953,20 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
 
+/* ===== Fallback images de fond (hero & services) ===== */
+document.querySelectorAll('[data-fallback]').forEach(el => {
+  const fb = el.dataset.fallback;
+  const cur = el.style.backgroundImage || el.style.getPropertyValue('--img');
+  const m = cur && cur.match(/url\(['"]?([^'")]+)['"]?\)/);
+  if(!m) return;
+  const test = new Image();
+  test.onerror = () => {
+    if(el.classList.contains('service-card')) el.style.setProperty('--img', "url('" + fb + "')");
+    else el.style.backgroundImage = "url('" + fb + "')";
+  };
+  test.src = m[1];
+});
+
 /* ===== SÉLECTEUR DE LANGUE (FR / EN) ===== */
 const I18N = {
   // Navbar
@@ -985,7 +1001,7 @@ const I18N = {
   "Gastronomie":"Gastronomy",
   "Cuisine locale et internationale face à l'océan":"Local and international cuisine facing the ocean",
   "Notre restaurant vous invite à un voyage culinaire alliant saveurs guinéennes authentiques et grands classiques internationaux. Chaque plat est préparé avec des produits frais, dans un cadre raffiné ouvert sur l'Atlantique.":"Our restaurant invites you on a culinary journey blending authentic Guinean flavours with great international classics. Every dish is prepared with fresh produce, in a refined setting open onto the Atlantic.",
-  "Profitez d'un petit-déjeuner buffet généreux chaque matin, puis savourez nos spécialités au déjeuner et au dîner, le tout bercé par le bruit des vagues.":"Enjoy a generous buffet breakfast every morning, then savour our specialities at lunch and dinner, all to the soothing sound of the waves.",
+  "Découvrez nos spécialités guinéennes et ouest-africaines : Thiéboudienne, Poulet Yassa, grillades de poisson frais du jour et Riz gras — sans oublier un généreux petit-déjeuner buffet chaque matin, le tout bercé par le bruit des vagues.":"Discover our Guinean and West African specialities: Thiéboudienne, Yassa Chicken, grilled catch of the day and Riz Gras — plus a generous buffet breakfast every morning, all to the soothing sound of the waves.",
   "Petit-déjeuner":"Breakfast","Déjeuner & Dîner":"Lunch & Dinner",
   "Réserver une table":"Book a table",
   // Avis
@@ -993,9 +1009,9 @@ const I18N = {
   "Ce que disent nos clients":"What our guests say",
   "« Un séjour inoubliable ! La vue sur l'océan depuis le balcon était à couper le souffle. Personnel aux petits soins et restaurant excellent. Je recommande vivement cet hôtel à Kamsar. »":"\"An unforgettable stay! The ocean view from the balcony was breathtaking. Attentive staff and an excellent restaurant. I highly recommend this hotel in Kamsar.\"",
   "« La Suite Royale est magnifique, spacieuse et moderne. Petit-déjeuner copieux et piscine impeccable. Un vrai havre de paix au bord de l'Atlantique. Nous reviendrons sans hésiter ! »":"\"The Royal Suite is magnificent, spacious and modern. Hearty breakfast and a spotless pool. A true haven of peace on the Atlantic shore. We will definitely be back!\"",
-  "Conakry, Guinée · Mars 2026":"Conakry, Guinea · March 2026",
-  "Expatrié · Février 2026":"Expatriate · February 2026",
-  "Dakar, Sénégal · Janvier 2026":"Dakar, Senegal · January 2026",
+  "Homme d'affaires, Conakry · Mars 2026":"Businessman, Conakry · March 2026",
+  "Expatrié CBG · Février 2026":"CBG Expatriate · February 2026",
+  "Touriste français · Janvier 2026":"French tourist · January 2026",
   // Contact
   "Nous trouver":"Find us",
   "Contact & Réservation":"Contact & Booking",
