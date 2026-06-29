@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Corniche Hôtel Kamsar — L'Océan à Votre Porte | Hôtel de luxe en Guinée</title>
+<meta name="description" content="La Corniche Hôtel Kamsar, hôtel boutique au bord de l'Atlantique en Guinée. 33 chambres avec balcon privé vue mer, piscine, restaurant, salle de conférence. Réservez dès maintenant." />
+<meta name="theme-color" content="#0A2342" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="La Corniche Hôtel Kamsar — L'Océan à Votre Porte" />
+<meta property="og:description" content="Un havre de paix au bord de l'Atlantique. 33 chambres vue mer à Kamsar, Guinée." />
+<meta property="og:image" content="https://lacorniche-hotel.com/wp-content/uploads/2024/10/Hotel-la-corniche-1.webp" />
+
+<link rel="icon" href="https://lacorniche-hotel.com/wp-content/uploads/2023/10/lacorniche_hotel_guinee.png" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   VARIABLES & RESET
+   ============================================================ */
+:root{
+  --bleu:#0A2342;
+  --bleu-clair:#12345c;
+  --or:#C9A84C;
+  --or-clair:#dcc06f;
+  --blanc:#F8F5F0;
+  --gris:#4A4A4A;
+  --gris-clair:#7a7a7a;
+  --wa:#25D366;
+  --ombre:0 18px 50px rgba(10,35,66,.18);
+  --ombre-douce:0 8px 30px rgba(10,35,66,.08);
+  --trans:.45s cubic-bezier(.22,.61,.36,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--gris);
+  background:var(--blanc);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--bleu);line-height:1.2;font-weight:600;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+ul{list-style:none;}
+section{position:relative;}
+
+.container{width:min(1200px,92%);margin-inline:auto;}
+
+/* Section titres communs */
+.eyebrow{
+  display:inline-block;
+  font-family:'Inter',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  font-size:.72rem;
+  font-weight:600;
+  color:var(--or);
+  margin-bottom:1rem;
+}
+.section-title{
+  font-size:clamp(1.9rem,4vw,2.9rem);
+  margin-bottom:1rem;
+}
+.section-head{text-align:center;max-width:640px;margin:0 auto 3.5rem;}
+.section-head p{color:var(--gris-clair);font-size:1.05rem;}
+.divider{width:60px;height:2px;background:var(--or);margin:1.1rem auto 0;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Inter',sans-serif;
+  font-weight:600;font-size:.92rem;
+  letter-spacing:.04em;
+  padding:.95rem 2.1rem;
+  border-radius:2px;
+  cursor:pointer;border:none;
+  transition:var(--trans);
+}
+.btn-or{background:var(--or);color:var(--bleu);}
+.btn-or:hover{background:var(--or-clair);transform:translateY(-3px);box-shadow:0 12px 28px rgba(201,168,76,.4);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7);}
+.btn-outline:hover{background:#fff;color:var(--bleu);border-color:#fff;}
+.btn-bleu{background:var(--bleu);color:#fff;}
+.btn-bleu:hover{background:var(--bleu-clair);transform:translateY(-3px);}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1rem,5vw,3rem);
+  transition:var(--trans);
+}
+.navbar.scrolled{
+  background:rgba(248,245,240,.97);
+  box-shadow:0 4px 24px rgba(10,35,66,.1);
+  padding-top:.7rem;padding-bottom:.7rem;
+  backdrop-filter:blur(8px);
+}
+.nav-logo{display:flex;align-items:center;gap:.7rem;}
+.nav-logo img{height:52px;width:auto;transition:var(--trans);filter:brightness(0) invert(1);}
+.navbar.scrolled .nav-logo img{filter:none;height:46px;}
+.nav-logo .brand{display:flex;flex-direction:column;line-height:1.05;}
+.nav-logo .brand b{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;transition:var(--trans);}
+.nav-logo .brand span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);}
+.navbar.scrolled .nav-logo .brand b{color:var(--bleu);}
+
+.nav-links{display:flex;align-items:center;gap:2.1rem;}
+.nav-links a.nav-item{
+  color:#fff;font-weight:500;font-size:.92rem;position:relative;
+  transition:color .3s;
+}
+.navbar.scrolled .nav-links a.nav-item{color:var(--bleu);}
+.nav-links a.nav-item::after{
+  content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;
+  background:var(--or);transition:width .3s;
+}
+.nav-links a.nav-item:hover::after{width:100%;}
+.nav-links a.nav-item:hover{color:var(--or);}
+
+.nav-cta{padding:.7rem 1.6rem;}
+
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:1100;}
+.nav-toggle span{width:26px;height:2px;background:#fff;transition:var(--trans);}
+.navbar.scrolled .nav-toggle span{background:var(--bleu);}
+.nav-toggle.open span{background:var(--bleu);}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{height:100vh;min-height:620px;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hero-slides{position:absolute;inset:0;}
+.hero-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.6s ease,transform 7s ease;
+  transform:scale(1.08);
+}
+.hero-slide.active{opacity:1;transform:scale(1);}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,35,66,.55) 0%,rgba(10,35,66,.35) 40%,rgba(10,35,66,.78) 100%);
+}
+.hero-content{position:relative;z-index:3;width:min(1200px,92%);margin-inline:auto;color:#fff;}
+.hero-content .eyebrow{color:var(--or-clair);}
+.hero h1{
+  color:#fff;font-size:clamp(2.6rem,7vw,5.4rem);font-weight:700;
+  max-width:14ch;margin-bottom:1.3rem;
+  text-shadow:0 4px 30px rgba(0,0,0,.4);
+}
+.hero .subtitle{
+  font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:300;
+  max-width:34ch;margin-bottom:2.4rem;color:rgba(255,255,255,.92);
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+
+.hero-dots{position:absolute;bottom:2.4rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:.7rem;}
+.hero-dots button{width:38px;height:3px;border:none;background:rgba(255,255,255,.4);cursor:pointer;transition:var(--trans);border-radius:2px;}
+.hero-dots button.active{background:var(--or);}
+
+.scroll-ind{
+  position:absolute;bottom:2.2rem;right:clamp(1.5rem,5vw,3.5rem);z-index:4;
+  color:#fff;display:flex;flex-direction:column;align-items:center;gap:.5rem;
+  font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+}
+.scroll-ind .mouse{
+  width:24px;height:38px;border:2px solid rgba(255,255,255,.7);border-radius:14px;
+  display:flex;justify-content:center;padding-top:7px;
+}
+.scroll-ind .wheel{width:3px;height:8px;background:var(--or);border-radius:2px;animation:scrollwheel 1.8s infinite;}
+@keyframes scrollwheel{0%{opacity:0;transform:translateY(-4px);}40%{opacity:1;}80%,100%{opacity:0;transform:translateY(10px);}}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats{background:var(--bleu);color:#fff;padding:3.2rem 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:var(--or);font-weight:700;}
+.stat .lbl{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:.3rem;}
+.stat{position:relative;}
+.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:15%;height:70%;width:1px;background:rgba(255,255,255,.15);}
+
+/* ============================================================
+   GENERIC SECTION PADDING
+   ============================================================ */
+.pad{padding:clamp(4rem,9vw,7rem) 0;}
+
+/* ============================================================
+   CHAMBRES
+   ============================================================ */
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.room-card{
+  background:#fff;border-radius:6px;overflow:hidden;
+  box-shadow:var(--ombre-douce);transition:var(--trans);
+  display:flex;flex-direction:column;
+}
+.room-card:hover{transform:translateY(-10px);box-shadow:var(--ombre);}
+.room-img{position:relative;overflow:hidden;aspect-ratio:4/3.4;}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+.room-card:hover .room-img img{transform:scale(1.08);}
+.room-price{
+  position:absolute;top:1rem;right:1rem;
+  background:var(--or);color:var(--bleu);font-weight:700;
+  padding:.45rem 1rem;border-radius:2px;font-size:.95rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+.room-price small{font-weight:500;font-size:.7rem;}
+.room-body{padding:1.6rem 1.7rem 1.9rem;display:flex;flex-direction:column;flex:1;}
+.room-body h3{font-size:1.5rem;margin-bottom:.7rem;}
+.room-specs{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;margin-bottom:1.3rem;color:var(--gris-clair);font-size:.86rem;}
+.room-specs span{display:inline-flex;align-items:center;gap:.4rem;}
+.room-specs svg{width:16px;height:16px;color:var(--or);}
+.room-body .btn{margin-top:auto;justify-content:center;}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;}
+.service-card{
+  position:relative;border-radius:6px;overflow:hidden;
+  border:1px solid rgba(201,168,76,.35);
+  background:#fff;transition:var(--trans);min-height:340px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  color:#fff;
+}
+.service-card::before{
+  content:'';position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform .8s ease;z-index:0;
+}
+.service-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,35,66,0) 30%,rgba(10,35,66,.88) 100%);
+  z-index:1;transition:var(--trans);
+}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--ombre);}
+.service-card:hover::before{transform:scale(1.1);}
+.svc-content{position:relative;z-index:2;padding:1.8rem;}
+.svc-icon{
+  width:54px;height:54px;border:1.5px solid var(--or);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-bottom:1rem;
+  background:rgba(10,35,66,.4);backdrop-filter:blur(2px);
+}
+.svc-icon svg{width:26px;height:26px;color:var(--or);}
+.svc-content h3{color:#fff;font-size:1.35rem;margin-bottom:.4rem;}
+.svc-content p{font-size:.86rem;color:rgba(255,255,255,.82);font-weight:300;}
+
+/* ============================================================
+   RESTAURANT (asymétrique)
+   ============================================================ */
+.resto{background:#fff;}
+.resto-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0;align-items:stretch;}
+.resto-imgs{position:relative;min-height:520px;}
+.resto-imgs .big{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.resto-imgs .small{
+  position:absolute;bottom:-40px;right:-50px;width:46%;
+  border:8px solid #fff;box-shadow:var(--ombre);object-fit:cover;aspect-ratio:4/3;z-index:2;
+}
+.resto-text{padding:clamp(2rem,5vw,4.5rem);display:flex;flex-direction:column;justify-content:center;background:var(--blanc);}
+.resto-text h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1.2rem;}
+.resto-text p{margin-bottom:1.1rem;color:var(--gris);}
+.resto-hours{display:flex;gap:2rem;margin:1rem 0 1.8rem;flex-wrap:wrap;}
+.resto-hours div b{display:block;color:var(--or);font-family:'Playfair Display',serif;font-size:1.4rem;}
+.resto-hours div span{font-size:.8rem;color:var(--gris-clair);text-transform:uppercase;letter-spacing:.1em;}
+
+/* ============================================================
+   AVIS
+   ============================================================ */
+.avis{background:var(--bleu);color:#fff;}
+.avis .section-title{color:#fff;}
+.avis .section-head p{color:rgba(255,255,255,.75);}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+.avis-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  padding:2.2rem 1.9rem;border-radius:6px;transition:var(--trans);
+  backdrop-filter:blur(4px);
+}
+.avis-card:hover{background:rgba(201,168,76,.1);border-color:var(--or);transform:translateY(-6px);}
+.stars{color:var(--or);font-size:1.05rem;letter-spacing:.12em;margin-bottom:1.1rem;}
+.avis-card p{font-style:italic;color:rgba(255,255,255,.9);font-weight:300;margin-bottom:1.5rem;font-size:.97rem;}
+.avis-person{display:flex;align-items:center;gap:.9rem;}
+.avis-avatar{
+  width:46px;height:46px;border-radius:50%;background:var(--or);color:var(--bleu);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Playfair Display',serif;
+}
+.avis-person b{color:#fff;font-family:'Inter',sans-serif;font-weight:600;display:block;font-size:.95rem;}
+.avis-person span{font-size:.78rem;color:rgba(255,255,255,.6);}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:0;box-shadow:var(--ombre);border-radius:8px;overflow:hidden;}
+.contact-info{background:var(--bleu);color:#fff;padding:clamp(2rem,4vw,3.5rem);}
+.contact-info h2{color:#fff;font-size:2rem;margin-bottom:.5rem;}
+.contact-info .eyebrow{color:var(--or-clair);}
+.contact-info > p{color:rgba(255,255,255,.75);margin-bottom:2rem;font-weight:300;}
+.contact-item{display:flex;gap:1.1rem;margin-bottom:1.6rem;align-items:flex-start;}
+.contact-item .ci-icon{
+  flex-shrink:0;width:46px;height:46px;border:1px solid var(--or);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.contact-item .ci-icon svg{width:20px;height:20px;color:var(--or);}
+.contact-item .ci-txt b{display:block;color:#fff;font-weight:600;margin-bottom:.1rem;font-size:.95rem;}
+.contact-item .ci-txt a,.contact-item .ci-txt span{color:rgba(255,255,255,.8);font-size:.92rem;}
+.contact-item .ci-txt a:hover{color:var(--or);}
+.contact-map{min-height:440px;}
+.contact-map iframe{width:100%;height:100%;border:0;display:block;}
+
+/* ============================================================
+   WHATSAPP FLOTTANT
+   ============================================================ */
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:900;
+  width:62px;height:62px;border-radius:50%;background:var(--wa);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 30px rgba(37,211,102,.5);
+  transition:var(--trans);
+}
+.wa-float svg{width:34px;height:34px;fill:#fff;}
+.wa-float:hover{transform:scale(1.1);}
+.wa-float::before{
+  content:'';position:absolute;inset:0;border-radius:50%;background:var(--wa);
+  animation:pulse 2s infinite;z-index:-1;
+}
+@keyframes pulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.8);opacity:0;}}
+.wa-tip{
+  position:absolute;right:74px;top:50%;transform:translateY(-50%);
+  background:#fff;color:var(--bleu);padding:.5rem .9rem;border-radius:4px;
+  font-size:.82rem;font-weight:600;white-space:nowrap;box-shadow:var(--ombre-douce);
+  opacity:0;pointer-events:none;transition:var(--trans);
+}
+.wa-float:hover .wa-tip{opacity:1;right:78px;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:#071a33;color:rgba(255,255,255,.7);padding:4rem 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:3rem;}
+.footer-logo img{height:60px;filter:brightness(0) invert(1);margin-bottom:1.2rem;}
+.footer p{font-size:.9rem;font-weight:300;line-height:1.8;}
+.footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.3rem;font-weight:600;}
+.footer ul li{margin-bottom:.7rem;}
+.footer ul li a{font-size:.9rem;transition:color .3s;}
+.footer ul li a:hover{color:var(--or);}
+.footer-social{display:flex;gap:.8rem;margin-top:1.2rem;}
+.footer-social a{
+  width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;transition:var(--trans);
+}
+.footer-social a:hover{background:var(--or);border-color:var(--or);}
+.footer-social svg{width:18px;height:18px;fill:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.5rem 0;text-align:center;font-size:.82rem;color:rgba(255,255,255,.5);}
+.footer-bottom a{color:var(--or);}
+
+/* ============================================================
+   ANIMATIONS AU SCROLL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,.61,.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal.d1{transition-delay:.12s;}
+.reveal.d2{transition-delay:.24s;}
+.reveal.d3{transition-delay:.36s;}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .resto-imgs .small{right:-20px;}
+}
+@media(max-width:860px){
+  .nav-links{
+    position:fixed;top:0;right:0;height:100vh;width:min(320px,80%);
+    background:var(--blanc);flex-direction:column;justify-content:center;
+    gap:1.8rem;transform:translateX(100%);transition:var(--trans);
+    box-shadow:-10px 0 40px rgba(0,0,0,.15);padding:2rem;
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a.nav-item{color:var(--bleu)!important;font-size:1.15rem;}
+  .nav-toggle{display:flex;}
+  .rooms-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto;}
+  .avis-grid{grid-template-columns:1fr;}
+  .resto-wrap{grid-template-columns:1fr;}
+  .resto-imgs{min-height:380px;}
+  .resto-imgs .small{display:none;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .contact-map{min-height:340px;order:2;}
+}
+@media(max-width:560px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:2rem 1rem;}
+  .stat:not(:last-child)::after{display:none;}
+  .stat:nth-child(odd)::after{content:'';display:block;position:absolute;right:0;top:15%;height:70%;width:1px;background:rgba(255,255,255,.15);}
+  .services-grid{grid-template-columns:1fr;max-width:380px;margin-inline:auto;}
+  .hero-btns{flex-direction:column;}
+  .hero-btns .btn{justify-content:center;}
+  .scroll-ind{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="navbar" id="navbar">
+  <a href="#accueil" class="nav-logo">
+    <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/lacorniche_hotel_guinee.png" alt="Logo La Corniche Hôtel" />
+    <span class="brand">
+      <b>La Corniche</b>
+      <span>Hôtel · Kamsar</span>
+    </span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#accueil" class="nav-item">Accueil</a>
+    <a href="#chambres" class="nav-item">Chambres</a>
+    <a href="#services" class="nav-item">Services</a>
+    <a href="#restaurant" class="nav-item">Restaurant</a>
+    <a href="#contact" class="nav-item">Contact</a>
+    <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20faire%20une%20r%C3%A9servation%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-or nav-cta">Réserver</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="accueil">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2024/10/Hotel-la-corniche-1.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8225.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/exterieurIMG_8222.jpeg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow reveal visible">★★★★★ · Kamsar, Guinée</span>
+    <h1 class="reveal visible">L'Océan à Votre Porte</h1>
+    <p class="subtitle reveal visible">Kamsar, Guinée — Un havre de paix au bord de l'Atlantique</p>
+    <div class="hero-btns reveal visible">
+      <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20faire%20une%20r%C3%A9servation%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-or">Réserver maintenant</a>
+      <a href="#chambres" class="btn btn-outline">Découvrir nos chambres</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots"></div>
+
+  <a href="#chiffres" class="scroll-ind">
+    <span class="mouse"><span class="wheel"></span></span>
+    Défiler
+  </a>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section class="stats" id="chiffres">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num">33</div><div class="lbl">Chambres</div></div>
+      <div class="stat reveal d1"><div class="num">10</div><div class="lbl">Ans d'expérience</div></div>
+      <div class="stat reveal d2"><div class="num">100%</div><div class="lbl">Vue Mer</div></div>
+      <div class="stat reveal d3"><div class="num">24h/24</div><div class="lbl">Service</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CHAMBRES ============================ -->
+<section class="pad" id="chambres">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hébergement</span>
+      <h2 class="section-title">Nos Chambres & Suites</h2>
+      <p>Chaque chambre dispose d'un balcon privé avec vue imprenable sur l'Atlantique. Confort, élégance et sérénité face à l'océan.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="rooms-grid">
+      <!-- Standard -->
+      <article class="room-card reveal">
+        <div class="room-img">
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/chambresIMG_8296-370x485.webp" alt="Chambre Standard vue mer" loading="lazy" />
+          <div class="room-price">80€ <small>/ nuit</small></div>
+        </div>
+        <div class="room-body">
+          <h3>Chambre Standard</h3>
+          <div class="room-specs">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9v10M21 9v10M3 19h18M6 9V6a2 2 0 012-2h8a2 2 0 012 2v3"/></svg> 25 m²</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="11" rx="1"/><path d="M3 13h18M7 7V5h10v2"/></svg> King 180×200</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5"/></svg> 2 adultes</span>
+          </div>
+          <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20une%20Chambre%20Standard%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-bleu">Réserver via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Suite Junior -->
+      <article class="room-card reveal d1">
+        <div class="room-img">
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_junior_5-370x485.jpg" alt="Suite Junior" loading="lazy" />
+          <div class="room-price">120€ <small>/ nuit</small></div>
+        </div>
+        <div class="room-body">
+          <h3>Suite Junior</h3>
+          <div class="room-specs">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9v10M21 9v10M3 19h18M6 9V6a2 2 0 012-2h8a2 2 0 012 2v3"/></svg> 40 m²</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="11" rx="1"/><path d="M3 13h18M7 7V5h10v2"/></svg> King 180×200</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5"/></svg> 2 adultes + 2 enfants</span>
+          </div>
+          <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20une%20Suite%20Junior%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-bleu">Réserver via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Suite Royale -->
+      <article class="room-card reveal d2">
+        <div class="room-img">
+          <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/suite_royal_3-370x485.jpg" alt="Suite Royale" loading="lazy" />
+          <div class="room-price">150€ <small>/ nuit</small></div>
+        </div>
+        <div class="room-body">
+          <h3>Suite Royale</h3>
+          <div class="room-specs">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18M3 9v10M21 9v10M3 19h18M6 9V6a2 2 0 012-2h8a2 2 0 012 2v3"/></svg> 55 m²</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="11" rx="1"/><path d="M3 13h18M7 7V5h10v2"/></svg> King 180×200</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5"/></svg> 2 adultes + 2 enfants</span>
+          </div>
+          <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20une%20Suite%20Royale%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-bleu">Réserver via WhatsApp</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="pad" id="services" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nos Prestations</span>
+      <h2 class="section-title">Services & Équipements</h2>
+      <p>Tout le nécessaire pour un séjour d'exception, entre détente et affaires.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal" style="--img:url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800')">
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 15c2 0 2 1.5 4 1.5S8 15 10 15s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5M2 20c2 0 2 1.5 4 1.5S8 20 10 20s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5M9 12V4a2 2 0 114 0M9 8h4"/></svg></div>
+          <h3>Piscine</h3>
+          <p>Détendez-vous au bord de notre piscine face à l'océan.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal d1" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2024/09/restoIMG_8389.webp')">
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v8a2 2 0 002 2h0a2 2 0 002-2V3M7 13v8M16 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4 2.5-1 2.5-4-1-5-2.5-5zM16 16v5"/></svg></div>
+          <h3>Restaurant & Café</h3>
+          <p>Cuisine locale et internationale, petit-déjeuner inclus.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal d2" style="--img:url('https://lacorniche-hotel.com/wp-content/uploads/2023/10/meeting_room_1.jpg')">
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Salle de conférence</h3>
+          <p>Espace moderne et équipé pour vos réunions d'affaires.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal d3" style="--img:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800')">
+        <div class="svc-content">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M6.5 17.5l-3 3M20.5 6.5l-3 3"/></svg></div>
+          <h3>Gym & Fitness</h3>
+          <p>Salle de sport équipée pour garder la forme en voyage.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- extras -->
+    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2.5rem;margin-top:3rem;color:var(--gris);font-weight:500;">
+      <span style="display:inline-flex;align-items:center;gap:.5rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M5 13a10 10 0 0114 0M8.5 16.5a5 5 0 017 0M2 9a16 16 0 0120 0"/><circle cx="12" cy="20" r="1" fill="#C9A84C"/></svg> WiFi gratuit</span>
+      <span style="display:inline-flex;align-items:center;gap:.5rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Parking gratuit</span>
+      <span style="display:inline-flex;align-items:center;gap:.5rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg> Petit-déjeuner 7h-11h</span>
+      <span style="display:inline-flex;align-items:center;gap:.5rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M3 18l4-8 4 5 3-6 4 9M3 18h18M5 6h.01M9 4h.01"/></svg> Vue mer panoramique</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESTAURANT ============================ -->
+<section class="resto" id="restaurant">
+  <div class="resto-wrap">
+    <div class="resto-imgs reveal">
+      <img class="big" src="https://lacorniche-hotel.com/wp-content/uploads/2024/09/rest3.jpg" alt="Restaurant La Corniche" loading="lazy" />
+      <img class="small" src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/resto_1.jpg" alt="Plat du restaurant" loading="lazy" />
+    </div>
+    <div class="resto-text reveal d1">
+      <span class="eyebrow">Gastronomie</span>
+      <h2>Cuisine locale et internationale face à l'océan</h2>
+      <p>Notre restaurant vous invite à un voyage culinaire alliant saveurs guinéennes authentiques et grands classiques internationaux. Chaque plat est préparé avec des produits frais, dans un cadre raffiné ouvert sur l'Atlantique.</p>
+      <p>Profitez d'un petit-déjeuner buffet généreux chaque matin, puis savourez nos spécialités au déjeuner et au dîner, le tout bercé par le bruit des vagues.</p>
+      <div class="resto-hours">
+        <div><b>7h – 11h</b><span>Petit-déjeuner</span></div>
+        <div><b>12h – 23h</b><span>Déjeuner & Dîner</span></div>
+      </div>
+      <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20restaurant%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-or" style="align-self:flex-start;">Réserver une table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ AVIS ============================ -->
+<section class="avis pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Témoignages</span>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="avis-grid">
+      <article class="avis-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>« Un séjour inoubliable ! La vue sur l'océan depuis le balcon était à couper le souffle. Personnel aux petits soins et restaurant excellent. Je recommande vivement cet hôtel à Kamsar. »</p>
+        <div class="avis-person">
+          <div class="avis-avatar">MD</div>
+          <div><b>Mariama Diallo</b><span>Conakry, Guinée · Mars 2026</span></div>
+        </div>
+      </article>
+
+      <article class="avis-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>« Perfect for business trips. The conference room was well-equipped and the WiFi reliable. The seafront location is simply stunning. The best hotel in the Kamsar area by far. »</p>
+        <div class="avis-person">
+          <div class="avis-avatar">JM</div>
+          <div><b>James Mitchell</b><span>Expatrié · Février 2026</span></div>
+        </div>
+      </article>
+
+      <article class="avis-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>« La Suite Royale est magnifique, spacieuse et moderne. Petit-déjeuner copieux et piscine impeccable. Un vrai havre de paix au bord de l'Atlantique. Nous reviendrons sans hésiter ! »</p>
+        <div class="avis-person">
+          <div class="avis-avatar">AC</div>
+          <div><b>Aïssatou Camara</b><span>Dakar, Sénégal · Janvier 2026</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="pad" id="contact" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nous trouver</span>
+      <h2 class="section-title">Contact & Réservation</h2>
+      <p>Au bord de la mer, derrière Villa 3 Avril — un emplacement unique à Kamsar.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <span class="eyebrow">La Corniche Hôtel</span>
+        <h2>Parlons de votre séjour</h2>
+        <p>Notre réception est à votre écoute 24h/24 pour organiser votre venue.</p>
+
+        <div class="contact-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="ci-txt"><b>Adresse</b><span>Au bord de la mer, derrière Villa 3 Avril, Kamsar, Guinée</span></div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div>
+          <div class="ci-txt"><b>Téléphone</b><a href="tel:+224611151517">+224 611 151 517</a></div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></div>
+          <div class="ci-txt"><b>Email</b><a href="mailto:booking@lacorniche-hotel.com">booking@lacorniche-hotel.com</a></div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div class="ci-txt"><b>Réception</b><span>Ouverte 24h/24 — 7j/7</span></div>
+        </div>
+
+        <a href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20faire%20une%20r%C3%A9servation%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" class="btn btn-or" style="margin-top:.8rem;">Réserver sur WhatsApp</a>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=Kamsar,Guinée&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Carte de Kamsar, Guinée" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHATSAPP FLOTTANT ============================ -->
+<a class="wa-float" href="https://wa.me/224611151517?text=Bonjour,%20je%20souhaite%20faire%20une%20r%C3%A9servation%20%C3%A0%20l'H%C3%B4tel%20La%20Corniche" target="_blank" rel="noopener" aria-label="Réserver sur WhatsApp">
+  <span class="wa-tip">Réservez sur WhatsApp</span>
+  <svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.1-4.6-11C24 2 20.1.4 16 .4zm0 28.5h-.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.2 5.8-13 13-13 3.5 0 6.7 1.4 9.2 3.8 2.5 2.5 3.8 5.7 3.8 9.2 0 7.2-5.8 13.1-12.7 13.1zm7.1-9.8c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.6.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.4 3.7 1.5 3.9c.2.2 2.7 4.2 6.6 5.9.9.4 1.6.6 2.2.8.9.3 1.8.2 2.4.2.7-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="https://lacorniche-hotel.com/wp-content/uploads/2023/10/lacorniche_hotel_guinee.png" alt="La Corniche Hôtel" />
+        <p>Un havre de paix au bord de l'Atlantique. 33 chambres avec balcon privé vue mer, à Kamsar, en Guinée.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.1a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg></a>
+          <a href="https://wa.me/224611151517" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6 0-4.2-1.6-8.1-4.6-11C24 2 20.1.4 16 .4zm0 28.5h-.1c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-5 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.2 5.8-13 13-13 3.5 0 6.7 1.4 9.2 3.8 2.5 2.5 3.8 5.7 3.8 9.2 0 7.2-5.8 13.1-12.7 13.1z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#chambres">Chambres</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#restaurant">Restaurant</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Chambres</h4>
+        <ul>
+          <li><a href="#chambres">Chambre Standard — 80€</a></li>
+          <li><a href="#chambres">Suite Junior — 120€</a></li>
+          <li><a href="#chambres">Suite Royale — 150€</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+224611151517">+224 611 151 517</a></li>
+          <li><a href="mailto:booking@lacorniche-hotel.com">booking@lacorniche-hotel.com</a></li>
+          <li>Kamsar, Guinée</li>
+          <li>Réception 24h/24</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 La Corniche Hôtel Kamsar — Tous droits réservés · Conçu avec passion au bord de l'Atlantique
+  </div>
+</footer>
+
+<script>
+/* ===== NAVBAR scroll ===== */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ===== MENU mobile ===== */
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  toggle.classList.remove('open');
+  links.classList.remove('open');
+}));
+
+/* ===== HERO slider ===== */
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dotsWrap = document.getElementById('heroDots');
+  let current = 0;
+  slides.forEach((_, i) => {
+    const b = document.createElement('button');
+    if(i === 0) b.classList.add('active');
+    b.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(b);
+  });
+  const dots = dotsWrap.querySelectorAll('button');
+  function goTo(i){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function next(){ goTo((current + 1) % slides.length); }
+  let timer = setInterval(next, 5500);
+  // reset timer on manual nav
+  dotsWrap.addEventListener('click', () => {
+    clearInterval(timer);
+    timer = setInterval(next, 5500);
+  });
+})();
+
+/* ===== Scroll reveal (Intersection Observer) ===== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+</script>
+
+<style>
+/* inject service card images via ::before using attribute */
+.service-card{background-size:cover;background-position:center;}
+.service-card::before{background-image:var(--img);}
+</style>
+</body>
+</html>
